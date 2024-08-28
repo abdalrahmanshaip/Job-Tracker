@@ -47,7 +47,7 @@ const Charts = ({
   ]
 
   return (
-    <Card>
+    <Card className=' lg:w-full w-96'>
       <CardHeader>
         <CardTitle>Job Applications Overview</CardTitle>
         <CardDescription>
@@ -55,7 +55,10 @@ const Charts = ({
         </CardDescription>
       </CardHeader>
       <CardContent className='h-56'>
-        <ChartContainer config={chartConfig} className='h-56 w-full'>
+        <ChartContainer
+          config={chartConfig}
+          className='h-56 w-full'
+        >
           <AreaChart
             data={Data}
             margin={{

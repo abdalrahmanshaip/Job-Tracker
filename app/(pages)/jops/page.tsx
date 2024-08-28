@@ -32,7 +32,7 @@ const JopsPage = async () => {
       <div className=' capitalize font-bold text-3xl'>
         {jopsTracker.length} Jobs Found
       </div>
-      <div className='grid grid-cols-2 gap-10 mt-10'>
+      <div className='grid lg:grid-cols-2 gap-10 mt-10'>
         {jopsTracker.map((item: TypeJopTracker) => {
           return (
             <div

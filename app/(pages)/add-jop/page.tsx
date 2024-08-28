@@ -49,7 +49,7 @@ const AddJopPage = () => {
       <h1 className='text-4xl font-bold'>Add Job</h1>
       <form
         action={formAction}
-        className='grid grid-cols-3 gap-10 mt-5 items-center '
+        className='grid  lg:grid-cols-3 gap-7 lg:gap-10 mt-5 items-center '
       >
         <div className='space-y-2'>
           <h1>Postion</h1>

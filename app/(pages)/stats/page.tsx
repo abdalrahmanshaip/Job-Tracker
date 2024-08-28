@@ -15,8 +15,8 @@ const StatsPage = async () => {
   }
 
   return (
-    <div>
-      <div className='header grid grid-cols-3 gap-x-4'>
+    <div className=''>
+      <div className='header grid lg:grid-cols-3 lg:gap-x-4 gap-y-2'>
         <span className='bg-muted p-5 text-center text-2xl'>
           Pending Jobs {jobStatus.PendingJops}
         </span>
