@@ -9,31 +9,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { useState } from 'react'
-import { useFormState, useFormStatus } from 'react-dom'
-import { TypeJopTracker } from '../(pages)/jops/page'
-import { Button } from '@/components/ui/button'
-import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { useFormState } from 'react-dom'
+import { toast } from 'sonner'
+import { SubmitBtn } from '../(pages)/add-jop/_components/SubmitBtn'
+import { TypeJopTracker } from '../(pages)/jops/_component/JobReturn'
 
 const initialState = {
   redirect: '',
   status: 0,
   message: '',
-}
-
-const SubmitBtn = () => {
-  const { pending } = useFormStatus()
-  return (
-    <Button
-      disabled={pending}
-      className='mt-auto'
-      type='submit'
-    >
-      {pending ? 'Adding jop...' : 'Add Job'}
-      <span className='ml-2'>+</span>
-    </Button>
-  )
 }
 
 const EditJop = ({ jopTracker }: { jopTracker: TypeJopTracker }) => {
