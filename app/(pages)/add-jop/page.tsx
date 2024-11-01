@@ -14,24 +14,12 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { toast } from 'sonner'
+import { SubmitBtn } from './_components/SubmitBtn'
 
 const initialState = {
   redirect: '',
   status: 0,
   message: '',
-}
-const SubmitBtn = () => {
-  const { pending } = useFormStatus()
-  return (
-    <Button
-      disabled={pending}
-      className='mt-auto'
-      type='submit'
-    >
-      {pending ? 'Adding jop...' : 'Add Job'}
-      <span className='ml-2'>+</span>
-    </Button>
-  )
 }
 const AddJopPage = () => {
   const router = useRouter()
